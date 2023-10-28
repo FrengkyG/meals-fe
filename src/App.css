@@ -1,38 +1,278 @@
-.App {
-  text-align: center;
+body {
+	background-color: #e0e0e0;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+	width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+	list-style-type: none;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li h1 {
+	display: block;
+	color: #97cd32;
+	font-size: 36px;
 }
 
-.App-link {
-  color: #61dafb;
+li button {
+	background-color: #97cd32;
+	border-width: 0px;
+	padding: 10px;
+	text-align: center;
+	width: 150px;
+	color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li input {
+	padding: 10px;
+	text-align: center;
+	border-width: 0px;
+	margin: 0;
+	width: 400px;
+}
+
+::placeholder {
+	color: #97cd32;
+}
+
+.content-header {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.content-header > img {
+	width: 60%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.content-sub-header {
+	width: 38%;
+	height: 77vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.content-sub-header img {
+	object-fit: cover;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+}
+
+.subheader-title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card {
+	border-radius: 15px;
+	padding: 15px;
+	background-color: #f9f5e7;
+}
+
+.search-title {
+	font-size: 36px;
+	text-align: center;
+	color: #97cd32;
+}
+
+.login-form {
+	width: 40vw;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	padding: 15px;
+	padding-bottom: 40px;
+	background-color: #f9f5e7;
+	text-align: center;
+}
+
+.login-form input {
+	text-align: center;
+	border-width: 0px;
+	width: 20vw;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
+}
+
+.login-form label {
+	font-size: 16px;
+}
+
+.green-button {
+	background-color: #97cd32;
+	border-width: 0px;
+	padding: 10px;
+	text-align: center;
+	width: 150px;
+	color: white;
+}
+
+.red-button {
+	background-color: red;
+	border-width: 0px;
+	padding: 10px;
+	text-align: center;
+	width: 150px;
+	color: white;
+}
+
+.green-button-sm {
+	border-radius: 10px;
+	background-color: #97cd32;
+	border-width: 0px;
+	padding: 10px;
+	text-align: center;
+	width: 50px;
+	font-size: 18px;
+	color: white;
+}
+
+.pink-button-sm {
+	border-radius: 10px;
+	background-color: pink;
+	border-width: 0px;
+	padding: 10px;
+	text-align: center;
+	width: 50px;
+	font-size: 18px;
+	color: white;
+}
+
+.rounded-button {
+	background-color: #97cd32;
+	border-width: 0px;
+	padding: 10px;
+	text-align: center;
+	width: 150px;
+	color: white;
+}
+
+.text-error {
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.box-shadow {
+	padding: 10px;
+	border: 0;
+	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+.content-search-items {
+	display: flex;
+	flex-direction: initial;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.item {
+	width: 21%;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 2%;
+}
+
+.item > img {
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+}
+
+.container-image {
+	width: 100%;
+	height: 47%;
+	position: relative;
+	text-align: center;
+}
+
+.image-text-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	font-size: 36px;
+	color: white;
+}
+
+@media screen and (max-width: 768px) {
+	.content-header {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.content-header > img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.content-sub-header {
+		width: 100%;
+		height: 100%;
+		justify-content: start;
+	}
+
+	.container-image {
+		margin-top: 20px;
+	}
+
+	.navbar {
+		flex-direction: column;
+	}
+
+	.container-login {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	li {
+		width: 100%;
+	}
+
+	li h1 {
+		font-size: 36px;
+		text-align: center;
+	}
+
+	li button {
+		width: 30%;
+	}
+
+	li input {
+		width: 70%;
+	}
+
+	.search-title {
+		margin-top: 75%;
+	}
+
+	.item {
+		width: 44%;
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 4%;
+	}
 }
